@@ -162,7 +162,7 @@
       .footer-col ul li { margin-bottom:.55rem; }
       .footer-col ul li a { font-size:.85rem; color:rgba(255,255,255,.5); text-decoration:none; transition:color .2s; }
       .footer-col ul li a:hover { color:var(--sky); }
-      .footer-bottom { margin-top:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.75rem; font-size:.8rem; color:rgba(255,255,255,.35); }
+      .footer-bottom { margin-top:1.5rem; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:.75rem; font-size:.8rem; color:rgba(255,255,255,.35); }
       .social-links { display:flex; gap:.75rem; }
       .social-links a { width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,.1); display:flex; align-items:center; justify-content:center; color:white; font-size:.85rem; text-decoration:none; transition:background .2s; }
       .social-links a:hover { background:var(--sky); }
