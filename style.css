@@ -851,11 +851,27 @@ body {
 /* CONTACT */
 .contact {
   padding: var(--section-pad) 0;
+  display: flex;
+  flex-direction: column;
 }
+
+.section-head {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-head .section-title {
+  text-align: center;
+}
+
 .contact__subtitle {
   color: var(--text-secondary);
   margin-top: 18px;
   max-width: 480px;
+  text-align: center;
 }
 
 .contact__form {
