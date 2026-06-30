@@ -3,656 +3,516 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cabinet Dentaire Dr. Smile</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Dr Smile — Cabinet Dentaire</title>
+    <meta
+      name="description"
+      content="Cabinet Dentaire Dr Smile — des soins dentaires modernes, précis et réalisés avec une attention exceptionnelle."
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <style></style>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- ══════════ HEADER  ══════════ -->
-    <header>
-      <div class="hero-wrap">
-        <img
-          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&q=80&fit=crop"
-          alt="Cabinet Dentaire Dr. Smile"
-        />
-      </div>
-      <div class="inner">
-        <div class="brand-section">
-          <div class="logo-circle">
-            <img
-              src="assets/logo-dr-smile.png"
-              alt="Logo Dr. Smile"
-              onerror="
-                this.outerHTML = '<span style=\'font-size:3rem\'>🦷</span>'
-              "
-            />
-          </div>
-          <div class="brand-text">
-            <h2>Cabinet Dentaire Dr. Smile</h2>
-            <p>Spécialiste en orthodontie et chirurgie buccale</p>
-          </div>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#equipe">L'équipe</a></li>
-            <li><a href="#esthetique">Esthétique</a></li>
-            <li><a href="#soins">Soins</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+      <span class="loader__mark">Dr Smile</span>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="navbar__inner">
+        <a href="#hero" class="navbar__logo" data-nav-reveal>Dr Smile</a>
+
+        <nav class="navbar__menu" id="navbarMenu">
+          <a href="#hero" class="navbar__link" data-nav-reveal>Accueil</a>
+          <a href="#about" class="navbar__link" data-nav-reveal>À propos</a>
+          <a href="#services" class="navbar__link" data-nav-reveal>Services</a>
+          <a href="#why" class="navbar__link" data-nav-reveal>Pourquoi nous</a>
+          <a href="#testimonials" class="navbar__link" data-nav-reveal>Avis</a>
+          <a href="#contact" class="navbar__link" data-nav-reveal>Contact</a>
         </nav>
+
+        <a href="#contact" class="btn btn--dark navbar__cta" data-nav-reveal
+          >Prendre rendez-vous</a
+        >
+
+        <button class="navbar__burger" id="burger" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
 
-    <!-- ══════════ BANDEAU ══════════ -->
-    <div class="welcome-strip">
-      <p>
-        📍 Abidjan, Cocody Riviera · <strong>Lun–Sam : 08h–19h</strong> ·
-        <strong>+225 07 00 00 00 00</strong>
-      </p>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-menu__links">
+        <a href="#hero">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#why">Pourquoi nous</a>
+        <a href="#testimonials">Avis</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn--dark mobile-menu__cta"
+        >Prendre rendez-vous</a
+      >
     </div>
 
-    <!-- ══════════ ACCUEIL ══════════ -->
-    <section id="accueil">
-      <div class="inner">
-        <div class="home-flex">
-          <div class="text-side reveal">
-            <span class="section-label">Bienvenue chez nous</span>
-            <h1 class="section-title">
-              Votre sourire,<br />notre <em>passion</em>
-            </h1>
-            <p class="section-sub">
-              Le Cabinet Dentaire Dr. Smile vous accueille dans un espace
-              moderne et bienveillant. Soins de qualité, écoute et technologie
-              de pointe au service de votre santé bucco-dentaire.
-            </p>
-            <div class="badge-row" style="margin-top: 1.5rem">
-              <span class="badge">✓ Prise en charge rapide</span>
-              <span class="badge">✓ Équipements modernes</span>
-              <span class="badge">✓ Équipe qualifiée</span>
-            </div>
-            <div class="cta-row">
-              <a href="#contact" class="btn btn-primary"
-                >📅 Prendre rendez-vous</a
-              >
-              <a href="#soins" class="btn btn-outline">Nos soins →</a>
-            </div>
-          </div>
-          <div class="img-side reveal">
-            <img
-              src="https://images.pexels.com/photos/4269276/pexels-photo-4269276.jpeg?w=900&q=80&fit=crop"
-              alt="Intérieur moderne du cabinet dentaire Dr. Smile"
-            />
-          </div>
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <div class="hero__media">
+          <div
+            class="hero__img"
+            style="
+              background-image: url(&quot;https://images.pexels.com/photos/5355702/pexels-photo-5355702.jpeg?q=80&w=1800&auto=format&fit=crop&quot;);
+            "
+          ></div>
+          <div class="hero__overlay"></div>
         </div>
 
-        <div class="stats-grid reveal">
-          <div class="stat-card">
-            <div class="number">10+</div>
-            <div class="label">Années d'expérience</div>
-          </div>
-          <div class="stat-card">
-            <div class="number">3 500</div>
-            <div class="label">Patients satisfaits</div>
-          </div>
-          <div class="stat-card">
-            <div class="number">98%</div>
-            <div class="label">Taux de satisfaction</div>
-          </div>
-          <div class="stat-card">
-            <div class="number">6</div>
-            <div class="label">Praticiens spécialisés</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════ L'ÉQUIPE ══════════ -->
-    <section id="equipe">
-      <div class="inner">
-        <div class="equipe-header reveal">
-          <span class="section-label">Notre équipe</span>
-          <h2 class="section-title">Des experts à votre service</h2>
-          <p class="section-sub">
-            Une équipe pluridisciplinaire, passionnée et à l'écoute, pour vous
-            offrir les meilleurs soins dentaires.
+        <div class="hero__content">
+          <p class="eyebrow hero__eyebrow" data-hero-anim>Cabinet Dentaire</p>
+          <h1 class="hero__title">
+            <span class="line" data-hero-line>Votre sourire</span>
+            <span class="line" data-hero-line>mérite l'excellence.</span>
+          </h1>
+          <p class="hero__subtitle" data-hero-anim>
+            Des soins dentaires modernes, précis et réalisés avec une attention
+            exceptionnelle.
           </p>
-        </div>
-        <div class="team-grid">
-          <div class="team-card reveal">
-            <div class="photo">
-              <img
-                src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=600&q=80&fit=crop&crop=top"
-                alt="Dr. Smile — Chirurgien-dentiste"
-              />
-            </div>
-            <div class="info">
-              <h3>Dr. Smile</h3>
-              <div class="role">Chirurgien-Dentiste · Fondateur</div>
-              <p>
-                Diplômé en médecine dentaire, spécialiste en orthodontie et
-                chirurgie buccale avec plus de 15 ans d'expérience.
-              </p>
-            </div>
-          </div>
-
-          <div class="team-card reveal">
-            <div class="photo">
-              <img
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80&fit=crop&crop=top"
-                alt="Dr. Amina Koné — Orthodontiste"
-              />
-            </div>
-            <div class="info">
-              <h3>Dr. Amina Koné</h3>
-              <div class="role">Orthodontiste</div>
-              <p>
-                Spécialiste des appareils dentaires fixes et invisibles. Formée
-                en France et au Canada, elle accompagne enfants et adultes.
-              </p>
-            </div>
-          </div>
-
-          <div class="team-card reveal">
-            <div class="photo">
-              <img
-                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80&fit=crop&crop=top"
-                alt="Dr. Marc Bédié — Parodontologue"
-              />
-            </div>
-            <div class="info">
-              <h3>Dr. Marc Bédié</h3>
-              <div class="role">Parodontologue</div>
-              <p>
-                Expert en santé des gencives et implantologie. Il assure un
-                suivi rigoureux pour prévenir les maladies parodontales.
-              </p>
-            </div>
-          </div>
-
-          <div class="team-card reveal">
-            <div class="photo">
-              <img
-                src="https://images.unsplash.com/photo-1643297654416-05795d62e39c?w=600&q=80&fit=crop&crop=top"
-                alt="Fatoumata Laye — Assistante dentaire"
-              />
-            </div>
-            <div class="info">
-              <h3>Fatoumata Laye</h3>
-              <div class="role">Assistante Dentaire Senior</div>
-              <p>
-                Présente depuis 8 ans au cabinet, Fatoumata assure le confort
-                des patients et la coordination des soins au quotidien.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════ ESTHÉTIQUE ══════════ -->
-    <section id="esthetique">
-      <div class="inner">
-        <div class="esth-layout">
-          <div class="esth-visual reveal">
-            <img
-              src="assets/img-sourir.jpg"
-              alt="Sourire parfait après soin esthétique"
-            />
-            <div class="floating-badge">
-              <div class="num">500+</div>
-              <div class="txt">sourires transformés</div>
-            </div>
-          </div>
-
-          <div class="reveal">
-            <span class="section-label">Dentisterie esthétique</span>
-            <h2 class="section-title">Révélez votre plus beau sourire</h2>
-            <p class="section-sub">
-              Nos traitements esthétiques combinent technologie avancée et
-              approche personnalisée pour sublimer votre sourire en toute
-              sécurité.
-            </p>
-            <div class="esth-list">
-              <div class="esth-item">
-                <div class="icon">✨</div>
-                <div class="content">
-                  <h4>Blanchiment dentaire professionnel</h4>
-                  <p>
-                    Technique au fauteuil ou à domicile pour un résultat jusqu'à
-                    8 teintes plus clair, en toute sécurité.
-                  </p>
-                </div>
-              </div>
-              <div class="esth-item">
-                <div class="icon">💎</div>
-                <div class="content">
-                  <h4>Facettes en céramique (Veneers)</h4>
-                  <p>
-                    Coques ultra-fines en porcelaine pour corriger forme,
-                    couleur et alignement sans abîmer les dents naturelles.
-                  </p>
-                </div>
-              </div>
-              <div class="esth-item">
-                <div class="icon">🔄</div>
-                <div class="content">
-                  <h4>Gouttières transparentes Invisalign</h4>
-                  <p>
-                    Orthodontie discrète et confortable, idéale pour adultes
-                    souhaitant corriger leur alignement sans bagues.
-                  </p>
-                </div>
-              </div>
-              <div class="esth-item">
-                <div class="icon">🎨</div>
-                <div class="content">
-                  <h4>Reconstitutions composites</h4>
-                  <p>
-                    Restaurations esthétiques invisibles pour réparer les dents
-                    ébréchées ou abîmées avec un rendu naturel.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <a href="#contact" class="btn btn-primary" style="margin-top: 2rem"
-              >Consulter un spécialiste</a
+          <div class="hero__actions" data-hero-anim>
+            <a href="#contact" class="btn btn--dark">Prendre rendez-vous</a>
+            <a href="#services" class="btn btn--ghost"
+              >Découvrir nos services</a
             >
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ══════════ SOINS ══════════ -->
-    <section id="soins">
-      <div class="inner">
-        <div class="soins-header reveal">
-          <span class="section-label">Nos soins</span>
-          <h2 class="section-title">Une prise en charge complète</h2>
-          <p class="section-sub">
-            De la prévention à la réhabilitation, nous couvrons l'ensemble des
-            besoins bucco-dentaires de toute la famille.
+        <div class="hero__scroll" data-hero-anim>
+          <span class="hero__scroll-line"></span>
+          <span>Découvrir</span>
+        </div>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats">
+        <div class="stats__grid">
+          <div class="stat-card" data-reveal>
+            <span class="stat-card__number" data-count="5000" data-suffix="+"
+              >0</span
+            >
+            <span class="stat-card__label">Patients satisfaits</span>
+          </div>
+          <div class="stat-card" data-reveal>
+            <span class="stat-card__number" data-count="15" data-suffix="+"
+              >0</span
+            >
+            <span class="stat-card__label">Années d'expérience</span>
+          </div>
+          <div class="stat-card" data-reveal>
+            <span class="stat-card__number" data-count="98" data-suffix="%"
+              >0</span
+            >
+            <span class="stat-card__label">Patients recommandent</span>
+          </div>
+          <div class="stat-card" data-reveal>
+            <span class="stat-card__number" data-count="24" data-suffix="h"
+              >0</span
+            >
+            <span class="stat-card__label">Réponse rapide</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <div class="about__media" data-reveal-image>
+          <div class="about__img">
+            <img src="assets/images/img-sourir.jpg" alt="about-img" />
+          </div>
+        </div>
+
+        <div class="about__content">
+          <p class="eyebrow" data-reveal>À propos</p>
+          <h2 class="section-title" data-reveal>
+            Un cabinet pensé pour votre confort, votre santé et votre confiance.
+          </h2>
+          <p class="about__text" data-reveal>
+            Depuis plus de quinze ans, le Cabinet Dentaire Dr Smile accompagne
+            ses patients avec une approche exigeante et humaine. Chaque soin est
+            pensé dans le moindre détail, alliant précision clinique,
+            technologies de pointe et un environnement apaisant, à la hauteur de
+            votre confiance.
           </p>
+
+          <ul class="about__list">
+            <li data-reveal>
+              <span class="about__icon">＋</span> Équipe certifiée et
+              expérimentée
+            </li>
+            <li data-reveal>
+              <span class="about__icon">＋</span> Équipements de dernière
+              génération
+            </li>
+            <li data-reveal>
+              <span class="about__icon">＋</span> Protocoles d'hygiène stricts
+            </li>
+          </ul>
         </div>
-        <div class="soins-grid">
-          <div class="soin-card reveal">
-            <div class="soin-img">
-              <img
-                src="https://images.pexels.com/photos/4269363/pexels-photo-4269363.jpeg?w=700&q=75&fit=crop&crop=center"
-                alt="Consultation dentaire"
-              />
-            </div>
-            <div class="soin-body">
-              <h3>Consultation & Bilan</h3>
-              <p>
-                Examen clinique complet, radiographies numériques et plan de
-                traitement personnalisé pour chaque patient.
-              </p>
-              <span class="soin-tag">Prévention</span>
-            </div>
-          </div>
+      </section>
 
-          <div class="soin-card reveal">
-            <div class="soin-img">
-              <img
-                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=700&q=75&fit=crop&crop=center"
-                alt="Détartrage"
-              />
-            </div>
-            <div class="soin-body">
-              <h3>Détartrage & Prophylaxie</h3>
-              <p>
-                Nettoyage professionnel pour éliminer tartre et plaque, avec
-                conseils d'hygiène adaptés à votre bouche.
-              </p>
-              <span class="soin-tag">Hygiène</span>
-            </div>
-          </div>
-
-          <div class="soin-card reveal">
-            <div class="soin-img">
-              <img
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&q=75&fit=crop&crop=center"
-                alt="Soins conservateurs"
-              />
-            </div>
-            <div class="soin-body">
-              <h3>Soins Conservateurs</h3>
-              <p>
-                Traitement des caries, obturations, soins de canaux et
-                dévitalisations réalisés sous anesthésie locale confortable.
-              </p>
-              <span class="soin-tag">Curatif</span>
-            </div>
-          </div>
-
-          <div class="soin-card reveal">
-            <div class="soin-img">
-              <img
-                src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=700&q=75&fit=crop&crop=center"
-                alt="Prothèses dentaires"
-              />
-            </div>
-            <div class="soin-body">
-              <h3>Prothèses dentaires</h3>
-              <p>
-                Couronnes, bridges et prothèses amovibles fabriqués sur mesure
-                pour retrouver confort et esthétique.
-              </p>
-              <span class="soin-tag">Prothèse</span>
-            </div>
-          </div>
-
-          <div class="soin-card reveal">
-            <div class="soin-img">
-              <img
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=700&q=75&fit=crop&crop=center"
-                alt="Implantologie"
-              />
-            </div>
-            <div class="soin-body">
-              <h3>Implantologie</h3>
-              <p>
-                Pose d'implants en titane pour remplacer durablement les dents
-                manquantes avec un résultat naturel et fonctionnel.
-              </p>
-              <span class="soin-tag">Chirurgie</span>
-            </div>
-          </div>
-
-          <div class="soin-card reveal">
-            <div class="soin-img">
-              <img
-                src="https://images.unsplash.com/photo-1502781252888-9143ba7f074e?w=700&q=75&fit=crop&crop=faces"
-                alt="Pédodontie enfants"
-              />
-            </div>
-            <div class="soin-body">
-              <h3>Pédodontie</h3>
-              <p>
-                Soins adaptés aux enfants dès le premier âge, dans un
-                environnement rassurant et bienveillant.
-              </p>
-              <span class="soin-tag">Enfants</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════ TÉMOIGNAGES ══════════ -->
-    <section class="temoignages">
-      <div class="inner">
-        <div class="temoignages-header reveal">
-          <span class="section-label" style="color: rgba(255, 255, 255, 0.55)"
-            >Témoignages</span
-          >
-          <h2 class="section-title" style="color: white">
-            Ce que disent nos patients
+      <!-- SERVICES -->
+      <section class="services" id="services">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Nos soins</p>
+          <h2 class="section-title" data-reveal>
+            Des services complets, pensés pour chaque sourire.
           </h2>
         </div>
-        <div class="reviews-grid">
-          <div class="review-card reveal">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              « Équipe professionnelle et très à l'écoute. J'avais peur du
-              dentiste depuis des années, et ici j'ai enfin retrouvé confiance.
-              Mon blanchiment est magnifique ! »
-            </blockquote>
-            <div class="review-author">
-              <div class="author-avatar">
-                <img
-                  src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80&fit=crop&crop=faces"
-                  alt="Awa Konaté"
-                />
-              </div>
-              <div class="author-info">
-                <div class="name">Awa Konaté</div>
-                <div class="date">Janvier 2025</div>
-              </div>
-            </div>
-          </div>
 
-          <div class="review-card reveal">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              « J'ai fait mes gouttières Invisalign ici. Le suivi est
-              impeccable, les résultats visibles dès les premières semaines. Je
-              recommande sans hésiter. »
-            </blockquote>
-            <div class="review-author">
-              <div class="author-avatar">
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&fit=crop&crop=faces"
-                  alt="Jean-Claude Diabaté"
-                />
-              </div>
-              <div class="author-info">
-                <div class="name">Jean-Claude Diabaté</div>
-                <div class="date">Mars 2025</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="review-card reveal">
-            <div class="stars">★★★★★</div>
-            <blockquote>
-              « Cabinet très moderne, personnel chaleureux. Mon enfant de 7 ans
-              n'a plus peur du dentiste depuis qu'il vient ici. Merci Dr. Smile
-              ! »
-            </blockquote>
-            <div class="review-author">
-              <div class="author-avatar">
-                <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80&fit=crop&crop=faces"
-                  alt="Marie-Brigitte Yao"
-                />
-              </div>
-              <div class="author-info">
-                <div class="name">Marie-Brigitte Yao</div>
-                <div class="date">Avril 2025</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════ CONTACT ══════════ -->
-    <section id="contact">
-      <div class="inner">
-        <div class="contact-layout">
-          <div class="reveal">
-            <span class="section-label">Nous contacter</span>
-            <h2 class="section-title">Venez nous rendre visite</h2>
-            <p class="section-sub" style="margin-bottom: 2rem">
-              Prenez rendez-vous en quelques clics ou contactez-nous
-              directement. Nous sommes là pour vous.
-            </p>
-            <div class="contact-block">
-              <div class="icon-box">📍</div>
-              <div>
-                <h4>Adresse</h4>
-                <p>
-                  Résidence Les Palmiers, Cocody Riviera 3<br />Abidjan, Côte
-                  d'Ivoire
-                </p>
-              </div>
-            </div>
-            <div class="contact-block">
-              <div class="icon-box">📞</div>
-              <div>
-                <h4>Téléphone</h4>
-                <a href="tel:+2250700000000">+225 07 00 00 00 00</a
-                ><a href="tel:+2250700000001">+225 07 00 00 00 01</a>
-              </div>
-            </div>
-            <div class="contact-block">
-              <div class="icon-box">✉️</div>
-              <div>
-                <h4>Email</h4>
-                <a href="mailto:contact@drsmile.ci">contact@drsmile.ci</a>
-              </div>
-            </div>
-            <div class="horaires">
-              <h4>🕐 Horaires d'ouverture</h4>
-              <div class="horaire-row">
-                <span class="day">Lundi – Vendredi</span
-                ><span class="time">08h00 – 19h00</span>
-              </div>
-              <div class="horaire-row">
-                <span class="day">Samedi</span
-                ><span class="time">09h00 – 17h00</span>
-              </div>
-              <div class="horaire-row">
-                <span class="day">Dimanche</span
-                ><span class="closed">Fermé</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-form reveal">
-            <h3>Prendre rendez-vous</h3>
-            <p class="form-sub">
-              Remplissez ce formulaire, nous vous rappellerons dans les 24h.
-            </p>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Prénom</label
-                ><input type="text" placeholder="Votre prénom" />
-              </div>
-              <div class="form-group">
-                <label>Nom</label><input type="text" placeholder="Votre nom" />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Téléphone</label
-                ><input type="tel" placeholder="+225 07 …" />
-              </div>
-              <div class="form-group">
-                <label>Email</label
-                ><input type="email" placeholder="exemple@mail.com" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Type de soin souhaité</label>
-              <select>
-                <option>-- Sélectionnez --</option>
-                <option>Consultation initiale</option>
-                <option>Détartrage / Nettoyage</option>
-                <option>Blanchiment dentaire</option>
-                <option>Facettes / Veneers</option>
-                <option>Orthodontie / Invisalign</option>
-                <option>Implantologie</option>
-                <option>Soins conservateurs</option>
-                <option>Pédodontie (enfant)</option>
-                <option>Autre</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Message (optionnel)</label>
-              <textarea
-                placeholder="Décrivez votre besoin ou posez une question…"
-              ></textarea>
-            </div>
-            <button
-              class="btn btn-primary form-submit"
-              onclick="alert('Merci ! Nous vous rappellerons bientôt. 😊')"
-            >
-              📅 Envoyer ma demande
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════ FOOTER ══════════ -->
-    <footer>
-      <div class="inner">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <h3>Cabinet Dentaire Dr. Smile</h3>
+        <div class="services__grid">
+          <article class="service-card" data-reveal>
+            <span class="service-card__icon">⬡</span>
+            <h3>Implants</h3>
             <p>
-              Votre santé bucco-dentaire est notre priorité. Un cabinet moderne,
-              une équipe expérimentée, un sourire épanoui.
+              Des solutions durables et esthétiques pour retrouver un sourire
+              complet et naturel.
             </p>
-            <div class="social-links" style="margin-top: 1.2rem">
-              <a href="#" title="Facebook">f</a>
-              <a href="#" title="Instagram">in</a>
-              <a href="#" title="WhatsApp">W</a>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-card__icon">✦</span>
+            <h3>Blanchiment</h3>
+            <p>
+              Un éclat retrouvé en toute sécurité, grâce à des techniques douces
+              et efficaces.
+            </p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-card__icon">◇</span>
+            <h3>Orthodontie</h3>
+            <p>Un alignement précis pour un sourire harmonieux, à tout âge.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-card__icon">◎</span>
+            <h3>Urgence</h3>
+            <p>
+              Une prise en charge rapide et rassurante, quand chaque minute
+              compte.
+            </p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-card__icon">○</span>
+            <h3>Détartrage</h3>
+            <p>
+              Un nettoyage en profondeur pour une hygiène bucco-dentaire
+              impeccable.
+            </p>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-card__icon">▽</span>
+            <h3>Facettes</h3>
+            <p>
+              Une esthétique sur-mesure, pour un sourire à la fois naturel et
+              parfait.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- WHY -->
+      <section class="why" id="why">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Pourquoi nous</p>
+          <h2 class="section-title" data-reveal>Pourquoi choisir Dr Smile</h2>
+        </div>
+
+        <div class="why__grid">
+          <div class="why-card" data-reveal>
+            <span class="why-card__num">01</span>
+            <h3>Technologie moderne</h3>
+            <p>
+              Des équipements de pointe pour des diagnostics précis et des
+              traitements minimalement invasifs.
+            </p>
+          </div>
+          <div class="why-card" data-reveal>
+            <span class="why-card__num">02</span>
+            <h3>Équipe expérimentée</h3>
+            <p>
+              Des praticiens formés aux techniques les plus avancées, à votre
+              écoute à chaque étape.
+            </p>
+          </div>
+          <div class="why-card" data-reveal>
+            <span class="why-card__num">03</span>
+            <h3>Hygiène irréprochable</h3>
+            <p>
+              Des protocoles stricts respectés à la lettre, pour votre sécurité
+              absolue.
+            </p>
+          </div>
+          <div class="why-card" data-reveal>
+            <span class="why-card__num">04</span>
+            <h3>Soins personnalisés</h3>
+            <p>
+              Chaque traitement est adapté à votre situation, vos besoins et vos
+              attentes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="gallery" id="gallery">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Galerie</p>
+          <h2 class="section-title" data-reveal>Notre cabinet, en images.</h2>
+        </div>
+
+        <div class="gallery__grid">
+          <div class="gallery-item" data-reveal>
+            <img src="assets/images/galerie-1.jpg" alt="gallery-img" />
+          </div>
+          <div class="gallery-item" data-reveal>
+            <img src="assets/images/galerie-2.jpg" alt="gallery-img" />
+          </div>
+          <div class="gallery-item" data-reveal>
+            <img src="assets/images/galerie-3.jpg" alt="gallery-img" />
+          </div>
+          <div class="gallery-item" data-reveal>
+            <img src="assets/images/galerie-4.jpg" alt="gallery-img" />
+          </div>
+          <div class="gallery-item" data-reveal>
+            <img src="assets/images/galerie-5.jpg" alt="gallery-img" />
+          </div>
+          <div class="gallery-item" data-reveal>
+            <img src="assets/images/galerie-6.jpg" alt="gallery-img" />
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="testimonials" id="testimonials">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Avis</p>
+          <h2 class="section-title" data-reveal>
+            La confiance de nos patients.
+          </h2>
+        </div>
+
+        <div class="testimonial-slider" id="testimonialSlider">
+          <div class="testimonial-track" id="testimonialTrack">
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars">★★★★★</div>
+              <p>
+                « Une équipe à l'écoute, un cabinet impeccable et un résultat
+                qui dépasse mes attentes. Je recommande sans hésiter. »
+              </p>
+              <div class="testimonial-card__person">
+                <div
+                  class="testimonial-card__photo"
+                  style="
+                    background-image: url(&quot;https://images.pexels.com/photos/12911883/pexels-photo-12911883.jpeg?q=80&w=200&auto=format&fit=crop&quot;);
+                  "
+                ></div>
+                <span>Michelle R.</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars">★★★★★</div>
+              <p>
+                « Précision, douceur et professionnalisme. J'ai enfin retrouvé
+                confiance en mon sourire. »
+              </p>
+              <div class="testimonial-card__person">
+                <div
+                  class="testimonial-card__photo"
+                  style="
+                    background-image: url(&quot;https://images.pexels.com/photos/6314916/pexels-photo-6314916.jpeg?q=80&w=200&auto=format&fit=crop&quot;);
+                  "
+                ></div>
+                <span>Mahamadoune C.</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-card__stars">★★★★★</div>
+              <p>
+                « Un cabinet à l'ambiance apaisante, des explications claires à
+                chaque étape. Une expérience vraiment haut de gamme. »
+              </p>
+              <div class="testimonial-card__person">
+                <div
+                  class="testimonial-card__photo"
+                  style="
+                    background-image: url(&quot;https://images.pexels.com/photos/4921034/pexels-photo-4921034.jpeg?q=80&w=200&auto=format&fit=crop&quot;);
+                  "
+                ></div>
+                <span>Fadilatou D.</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="process" id="process">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Processus</p>
+          <h2 class="section-title" data-reveal>
+            Votre parcours de soin, en toute clarté.
+          </h2>
+        </div>
+
+        <div class="process__timeline">
+          <div class="process__line">
+            <div class="process__line-fill" id="processLineFill"></div>
+          </div>
+
+          <div class="process__step" data-reveal>
+            <span class="process__num">1</span>
+            <h3>Prise de rendez-vous</h3>
+            <p>Un échange simple et rapide pour comprendre votre besoin.</p>
+          </div>
+          <div class="process__step" data-reveal>
+            <span class="process__num">2</span>
+            <h3>Consultation</h3>
+            <p>Un diagnostic complet et des explications claires.</p>
+          </div>
+          <div class="process__step" data-reveal>
+            <span class="process__num">3</span>
+            <h3>Traitement</h3>
+            <p>Des soins précis, réalisés avec la plus grande attention.</p>
+          </div>
+          <div class="process__step" data-reveal>
+            <span class="process__num">4</span>
+            <h3>Suivi</h3>
+            <p>Un accompagnement après-soin pour un résultat durable.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Rendez-vous</p>
+          <h2 class="section-title" data-reveal>
+            Prenez rendez-vous dès aujourd'hui.
+          </h2>
+          <p class="contact__subtitle" data-reveal>
+            Notre équipe vous répond sous 24h pour organiser votre consultation.
+          </p>
+        </div>
+
+        <form class="contact__form" id="contactForm" data-reveal>
+          <div class="form-row">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder=" "
+              />
+              <label for="name">Nom</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                placeholder=" "
+              />
+              <label for="phone">Téléphone</label>
             </div>
           </div>
-          <div class="footer-col">
-            <h4>Navigation</h4>
-            <ul>
-              <li><a href="#accueil">Accueil</a></li>
-              <li><a href="#equipe">L'équipe</a></li>
-              <li><a href="#esthetique">Esthétique</a></li>
-              <li><a href="#soins">Soins</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder=" "
+            />
+            <label for="email">Email</label>
           </div>
-          <div class="footer-col">
-            <h4>Soins</h4>
-            <ul>
-              <li><a href="#">Blanchiment</a></li>
-              <li><a href="#">Facettes</a></li>
-              <li><a href="#">Invisalign</a></li>
-              <li><a href="#">Implants</a></li>
-              <li><a href="#">Pédodontie</a></li>
-            </ul>
+          <div class="form-group">
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              placeholder=" "
+            ></textarea>
+            <label for="message">Message</label>
           </div>
-          <div class="footer-col">
-            <h4>Contact</h4>
-            <ul>
-              <li><a href="tel:+2250700000000">+225 07 00 00 00 00</a></li>
-              <li>
-                <a href="mailto:contact@drsmile.ci">contact@drsmile.ci</a>
-              </li>
-              <li><a href="#">Cocody Riviera 3, Abidjan</a></li>
-              <li><a href="#">Lun–Ven : 08h–19h</a></li>
-              <li><a href="#">Sam : 09h–17h</a></li>
-            </ul>
-          </div>
+          <button type="submit" class="btn btn--dark contact__submit">
+            <span>Envoyer la demande</span>
+          </button>
+          <p class="contact__success" id="formSuccess">
+            Merci, votre demande a bien été envoyée.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__top">
+        <span class="footer__logo">Dr Smile</span>
+
+        <nav class="footer__links">
+          <a href="#hero">Accueil</a>
+          <a href="#about">À propos</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram" class="social-link">
+            <img
+              src="assets/icon/instagram-icon.svg"
+              alt="Instagram"
+              width="24"
+              height="24"
+            />
+          </a>
+          <a href="#" aria-label="Facebook" class="social-link">
+            <img
+              src="assets/icon/facebook_icon.svg"
+              alt="Facebook"
+              width="24"
+              height="24"
+            />
+          </a>
+          <a href="#" aria-label="LinkedIn" class="social-link">
+            <img
+              src="assets/icon/linkedin_icon.svg"
+              alt="LinkedIn"
+              width="24"
+              height="24"
+            />
+          </a>
         </div>
-        <div class="footer-bottom">
-          <span
-            >© <span id="current-year">2026</span> Cabinet Dentaire Dr. Smile ·
-            Tous droits réservés</span
-          >
-        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>ACI 2000, Bamako - Mali. Tel: +223 84 84 84 00</p>
+        <p>
+          &copy; <span id="year"></span> Cabinet Dentaire Dr Smile. Tous droits
+          réservés.
+        </p>
       </div>
     </footer>
 
-    <a class="float-rdv" href="#contact">📅 Rendez-vous</a>
-
-    <script>
-      const revealEls = document.querySelectorAll(".reveal");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("visible");
-              observer.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-      revealEls.forEach((el) => observer.observe(el));
-
-      // COPYRIGHT - année dynamique
-      const currentYearEl = document.getElementById("current-year");
-      if (currentYearEl) {
-        currentYearEl.textContent = new Date().getFullYear();
-      }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
