@@ -1,4 +1,4 @@
-# Dr Smile — Cabinet Dentaire Premium
+# Dr Smile — Premium Dental Clinic
 
 A premium dental clinic website. Built with HTML, CSS and JavaScript, featuring GSAP animations, scroll-triggered reveals, a minimalist elegant interface and a fully responsive navigation.
 
@@ -30,4 +30,4 @@ A premium dental clinic website. Built with HTML, CSS and JavaScript, featuring 
 
 ## Preview
 
-![Dr Smile Preview](assets/preview.png)
+![Dr Smile Preview](assets/images/preview.png)
