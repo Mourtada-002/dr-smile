@@ -1,6 +1,6 @@
 # Dr Smile — Premium Dental Clinic
 
-A premium dental clinic website. Built with HTML, CSS and JavaScript, featuring GSAP animations, scroll-triggered reveals, a minimalist elegant interface and a fully responsive navigation.
+A modern dental clinic website. Built with HTML, CSS and JavaScript, featuring GSAP animations, scroll-triggered reveals, a minimalist elegant interface and a fully responsive navigation.
 
 ---
 
