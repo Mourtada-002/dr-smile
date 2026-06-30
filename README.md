@@ -1,4 +1,4 @@
-# Dr Smile — Premium Dental Clinic
+# Dr Smile — Modern Dental clinic
 
 A modern dental clinic website. Built with HTML, CSS and JavaScript, featuring GSAP animations, scroll-triggered reveals, a minimalist elegant interface and a fully responsive navigation.
 
