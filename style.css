@@ -501,7 +501,7 @@ body {
   overflow: hidden;
 }
 .about__img {
-  width: 90%;
+  width: 100%;
   aspect-ratio: 4/5;
   background-size: cover;
   background-position: center;
